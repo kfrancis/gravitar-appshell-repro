@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiAppNet8.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:MauiAppNet8.ViewModels"
+    x:DataType="vm:MainViewModel">
+    <VerticalStackLayout HorizontalOptions="Center">
+        <toolkit:AvatarView
+            Margin="0,10,0,10"
+            Padding="0"
+            BackgroundColor="LightGray"
+            BorderColor="Gray"
+            HeightRequest="75"
+            HorizontalOptions="Center"
+            WidthRequest="75">
+            <toolkit:AvatarView.ImageSource>
+                <toolkit:GravatarImageSource Email="{Binding Email}" Image="Robohash" />
+            </toolkit:AvatarView.ImageSource>
+        </toolkit:AvatarView>
+        <Label HorizontalTextAlignment="Center" Text="{Binding Email}" />
+    </VerticalStackLayout>
+</ContentPage>
